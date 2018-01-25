@@ -5,6 +5,6 @@ import (
 )
 
 type IChain interface {
-	Treat(*Info.MessageInfo) (error)
-	SetNextChain(IChain)
+	Treat(*Info.MessageInfo, *Info.UserConnection) (error)
+	SetNextChain(IChain) IChain
 }

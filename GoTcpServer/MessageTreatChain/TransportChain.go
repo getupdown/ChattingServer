@@ -13,7 +13,7 @@ type TransportChain struct {
 }
 
 
-func (t *TransportChain) Treat(info *Info.MessageInfo) (err error) {
+func (t *TransportChain) Treat(info *Info.MessageInfo, connection *Info.UserConnection) (err error) {
 	//get the conn of the receiver
 	con, err := t.GlobalSocketMap.Get(info.TargetID)
 	if err != nil {

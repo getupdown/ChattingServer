@@ -34,4 +34,3 @@ func (mp *GlobalSocketMap) Set(key string, value net.Conn) {
 	mp.Socketmap[key] = value
 	mp.Mylock.Unlock()
 }
-

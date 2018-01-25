@@ -5,6 +5,7 @@ type AbsChain struct {
 	NextChain IChain
 }
 
-func (abc *AbsChain) SetNextChain(nextchain IChain) {
+func (abc *AbsChain) SetNextChain(nextchain IChain) IChain {
 	abc.NextChain = nextchain
+	return nextchain
 }
